@@ -22,11 +22,12 @@ const { title } = Astro.props;
       <aside class="[ grid-area: aside] flex-col flex overflow-y-auto">
         <AsideMenu />
       </aside>
-      <main class="[grid-area: main] flex flex-col overflow-y-auto rounded-lg">
-        main
+      <main
+        class="[grid-area: main] flex flex-col bg-zinc-900 overflow-y-auto rounded-lg w-full"
+      >
+        <slot />
       </main>
-      <footer class="[grid-area: player] min-h-[100px]">FOOTER</footer>
-      <slot />
+      <footer class="[grid-area:player] h-[80px]">FOOTER</footer>
     </div>
   </body>
 </html>
@@ -42,9 +43,11 @@ const { title } = Astro.props;
 </style>
 <style is:global>
   html {
-    font-family: system-ui, sans-serif;
-    background: #13151a;
+    font-family: "CircularStd", system-ui, sans-serif;
+    background: #010101;
+    color: white;
   }
+
   @font-face {
     font-family: "CircularStd";
     src: url("/fonts/CircularStd-Medium.woff2") format("woff2");
