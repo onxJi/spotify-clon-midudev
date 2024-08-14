@@ -1,6 +1,7 @@
 import { usePlayerStore } from "../store/playerStore";
 import { useEffect, useRef, useState } from "react";
 import { Slider } from "./Slider";
+import { setAudioRef } from "../services/audioService";
 
 export const Pause = ({ className }) => (
   <svg
@@ -229,6 +230,10 @@ export function Player() {
     (state) => state
   );
   const audioRef = useRef();
+
+  useEffect(() => {
+    setAudioRef(audioRef);
+  }, [isPlaying]);
 
   useEffect(() => {
     isPlaying ? audioRef.current.play() : audioRef.current.pause();
