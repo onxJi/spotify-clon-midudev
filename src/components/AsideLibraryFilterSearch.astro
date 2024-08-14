@@ -1,0 +1,19 @@
+---
+import Search from "../icons/Search.astro";
+import SideMenuItem from "./SideMenuItem.astro";
+import ListIcon from "../icons/ListIcon.astro";
+---
+
+<header class="flex justify-between pt-[2px] pr-1 pb-0 pl-2">
+  <button
+    class="flex items-center w-8 h-8 p-2 text-zinc-400 rounded-full hover:bg-zinc-800"
+  >
+    <Search />
+  </button>
+  <button
+    class="flex w-[120px] h-8 text-zinc-400 hover:text-zinc-100 py-1 pl-4 pr-3 gap-1 items-center transition-all ease-out duration-200 hover:scale-105"
+  >
+    <span>Recientes</span>
+    <ListIcon />
+  </button>
+</header>

@@ -6,9 +6,9 @@ interface Props {
 const { href } = Astro.props;
 ---
 
-<li>
+<li class="[list-style:none]">
   <a
-    class="flex gap-4 text-zinc-400 hover:text-zinc-100 items-center py-3 px-5 font-medium"
+    class="flex gap-4 text-zinc-400 hover:text-zinc-100 items-center font-medium"
     href={href}
   >
     <slot />
