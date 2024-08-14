@@ -314,7 +314,7 @@ export function Player() {
       </div>
 
       <div className="flex items-center gap-2">
-        <h1>Hola </h1>
+        {/* Control de volumen */}
         <VolumeControl />
         <button className="rounded-full p-2 hover:scale-110">
           <SmallScreen />
