@@ -4,7 +4,7 @@ interface Props {
   playlists: Playlist;
 }
 const { playlists } = Astro.props;
-const { id, cover, title, artists, color } = playlists;
+const { id, cover, title, artists } = playlists;
 const artistsString = artists.join(", ");
 ---
 
